@@ -1,7 +1,7 @@
 <?php include "includes/header.php"; ?>
 
 <body>
-<?php include "db.php";?>
+<?php include "includes/db.php";?>
 
     
     <!-- Navigation -->
