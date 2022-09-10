@@ -8,7 +8,7 @@
     foreach($db as $key => $value) {
         define(strtoupper($key), $value);
     }
-    $connection = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+    $connection = mysqli_connect("localhost", "root", "", "cms");
     if($connection) {
         echo "hell";
     }
