@@ -1,5 +1,19 @@
 <div class="col-md-8">
 
+<?php 
+
+    $query = "SELECT * FROM posts";
+    $select_all_posts = mysqli_query($connection, $query);
+
+    while ($row = mysqli_fetch_array($select_all_posts)) {
+        
+    }
+
+
+
+?>
+
+
                 <h1 class="page-header">
                     Page Heading
                     <small>Secondary Text</small>
