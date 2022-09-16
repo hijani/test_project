@@ -1,6 +1,14 @@
 <div class="col-md-4">
     <?php 
-        echo $_POST['search']; 
+        
+        if(isset($_POST['submit'])) {
+            $search = $_POST['search'];
+
+            $query = "SELECT * FROM posts";
+            $query .= "WHERE post_tags = '$$search$'";
+        }
+
+
     ?>
 
                 <!-- Blog Search Well -->
