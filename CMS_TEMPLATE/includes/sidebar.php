@@ -6,8 +6,7 @@
 
             $search = $_POST['search'];
 
-            $query = "SELECT * FROM posts ";
-            $query .= "WHERE post_tags LIKE '$$search$'";
+            $query = "SELECT * FROM posts WHERE post_tags LIKE '%$search%' ";
             $search_connection = mysqli_query($connection, $query);
 
             if (!$search_connection) {
@@ -15,12 +14,13 @@
             }
 
             $count = mysqli_num_rows($search_connection);
+            echo $count;
 
-            if($count == 0) {
-                echo "<h4>no tags found<h4/>";
-            } else {
-                echo "<h4>tags found<h4/>";
-            }
+            // if($count == 0) {
+            //     echo "<h4>no tags found<h4/>";
+            // } else {
+            //     echo "<h4>tags found<h4/>";
+            // }
 
 
         }
