@@ -7,13 +7,11 @@
             $search = $_POST['search'];
 
             $query = "SELECT * FROM posts ";
-            $query .= "WHERE post_tags = '$$search$'";
+            $query .= "WHERE post_tags LIKE '$$search$'";
             $search_connection = mysqli_query($connection, $query);
 
             if (!$search_connection) {
                 die("query error" . mysqli_error($connection));
-            } else {
-                echo "query success";
             }
 
             $count = mysqli_num_rows($search_connection);
