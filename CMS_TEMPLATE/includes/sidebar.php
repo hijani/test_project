@@ -3,18 +3,28 @@
     <?php 
         
         if(isset($_POST['submit'])) {
-            global $connection;
+
             $search = $_POST['search'];
 
-            $query = "SELECT * FROM posts";
+            $query = "SELECT * FROM posts ";
             $query .= "WHERE post_tags = '$$search$'";
             $search_connection = mysqli_query($connection, $query);
 
             if (!$search_connection) {
                 die("query error" . mysqli_error($connection));
-            } 
+            } else {
+                echo "query success";
+            }
 
-            
+            $count = mysqli_num_rows($search_connection);
+
+            if($count == 0) {
+                echo "<h4>no tags found<h4/>";
+            } else {
+                echo "<h4>tags found<h4/>";
+            }
+
+
         }
 
 
