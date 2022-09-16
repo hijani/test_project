@@ -1,4 +1,7 @@
 <div class="col-md-4">
+    <?php 
+        echo $_POST['search']; 
+    ?>
 
                 <!-- Blog Search Well -->
                 <div class="well">
