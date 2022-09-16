@@ -1,4 +1,4 @@
-
+<?php include "db.php"; ?>
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 
     <div class="container">
@@ -18,6 +18,7 @@
             <ul class="nav navbar-nav">
 
                 <?php 
+                        global $connection;
                         $query = "SELECT * FROM categories";
                         $select_data_from_categories = mysqli_query($connection, $query);
                         while ($row = mysqli_fetch_assoc($select_data_from_categories)){
