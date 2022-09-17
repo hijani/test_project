@@ -7,7 +7,25 @@
         <!-- Navigation -->
         <?php include "includes/navigation.php"; ?>
 
-        <?php include "includes/page_wrapper.php" ?>
+        <div id="page-wrapper">
+
+            <div class="container-fluid">
+
+                <!-- Page Heading -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">
+                            Welcome to CMS Admin
+                            <small>Author</small>
+                        </h1>
+                    </div>
+                </div>
+                <!-- /.row -->
+
+            </div>
+    <!-- /.container-fluid -->
+
+        </div>
         <!-- /#page-wrapper -->
 
     </div>
