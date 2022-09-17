@@ -76,6 +76,7 @@
                                             $delete_cat_id = $_GET['delete'];
                                             $delete_query = "DELETE FROM categories WHERE cat_id = {$cat_id}";
                                             $run_query = mysqli_query($connection, $delete_query);
+                                            header("Location: categories.php");
                                         }
                                     ?>
                                 </tbody>
