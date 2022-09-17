@@ -55,7 +55,7 @@
 
         </nav>
 
-        
+        <?php include "includes/page_wrapper.php" ?>
         <!-- /#page-wrapper -->
 
     </div>
