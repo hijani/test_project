@@ -41,16 +41,16 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
                                     <?php 
                                         while ($row = mysqli_fetch_assoc($select_categories)){
                                             $cat_id = $row['cat_id'];
                                             $cat_title = $row['cat_title'];
-                                            echo "<td>$cat_id</td>";
-                                            echo "<td>$cat_title</td>";
+                                            echo "<tr>
+                                                <td>$cat_id</td>
+                                                <td>$cat_title</td>
+                                            </tr>";
                                         }
                                     ?>
-                                    </tr>
                                 </tbody>
                             </table>
                         </div>
