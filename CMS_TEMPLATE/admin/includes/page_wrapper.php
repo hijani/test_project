@@ -7,6 +7,7 @@
             <div class="col-lg-12">
                 <h1 class="page-header">
                     Welcome to CMS Admin
+                    <small>Author</small>
                 </h1>
             </div>
         </div>
