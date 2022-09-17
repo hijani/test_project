@@ -19,13 +19,13 @@
 
                 <?php 
                         global $connection;
-                        $query = "SELECT * FROM categories";
-                        $select_data_from_categories = mysqli_query($connection, $query);
+                        $nav_query = "SELECT * FROM categories";
+                        $select_data_from_categories = mysqli_query($connection, $nav_query);
                         while ($row = mysqli_fetch_assoc($select_data_from_categories)){
-                            $cat_title = $row['db_title'];
-                            echo "<li><a href='#'>{$cat_title}</a></li>";
+                            $cat_title = $row['cat_title'];
+                            echo "<li><a href='#'>$cat_title</a></li>";
                         }
-                    ?>
+                ?>
                 <!-- <li>
                         <a href="#">About</a>
                     </li>
