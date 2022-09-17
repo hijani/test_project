@@ -66,15 +66,15 @@
                                             echo "<tr>
                                                 <td>$cat_id</td>
                                                 <td>$cat_title</td>
-                                                <td><a href='categories.php?delete = $cat_id' />Delete</td>
+                                                <td><a href='categories.php?delete=$cat_id' />Delete</td>
                                             </tr>";
                                         }
                                     ?>
 
                                     <?php
-                                        if(isset($_POST['delete'])) {
-                                            $delete_cat_id = $_POST['delete'];
-                                            $delete_query = "DELETE FROM categories WHERE cat_id = $cat_id";
+                                        if(isset($_GET['delete'])) {
+                                            $delete_cat_id = $_GET['delete'];
+                                            $delete_query = "DELETE FROM categories WHERE cat_id = {$cat_id}";
                                             $run_query = mysqli_query($connection, $delete_query);
                                         }
                                     ?>
