@@ -1,3 +1,4 @@
+<?php ob_start(); ?>
 <?php include "includes/header.php" ?>
 
 <body>
@@ -64,9 +65,9 @@
                                             $cat_id = $row['cat_id'];
                                             $cat_title = $row['cat_title'];
                                             echo "<tr>
-                                                <td>$cat_id</td>
-                                                <td>$cat_title</td>
-                                                <td><a href='categories.php?delete=$cat_id' />Delete</td>
+                                                <td>{$cat_id}</td>
+                                                <td>{$cat_title}</td>
+                                                <td><a href='categories.php?delete={$cat_id}' />Delete</td>
                                             </tr>";
                                         }
                                     ?>
