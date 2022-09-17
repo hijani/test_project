@@ -50,17 +50,23 @@
                             <form action="categories.php" method="post">
                                 <div class="form-group">
                                     <label for="cat_title">Update Category</label>
-                                    <?php
-                                        global $connection;
-                                        $nav_query = "SELECT * FROM categories";
-                                        $select_categories = mysqli_query($connection, $nav_query);
+                                    <?php 
+                                        if (isset($_GET['edit'])) {
+                                            $edit_id = $_GET['edit'];
 
-                                        while ($row = mysqli_fetch_assoc($select_categories)){
-                                            $cat_id = $row['cat_id'];
-                                            $cat_title = $row['cat_title'];
+                                            global $connection;
+                                            $nav_query = "SELECT * FROM categories WHERE cat_id = {$edit_id}";
+                                            $select_categories = mysqli_query($connection, $nav_query);
+
+                                            while ($row = mysqli_fetch_assoc($select_categories)){
+                                                $cat_id = $row['cat_id'];
+                                                $cat_title = $row['cat_title'];
                                     ?>
-                                        <input type="text" name="cat_title" class="form-control" placeholder="Category Title">
-                                    <?php } ?>
+                                        <input type="text" value=<?php if (isset($cat_title)) {echo $cat_title;} ?> name="cat_title" class="form-control" placeholder="Category Title">
+                                    <?php 
+                                            }
+                                        } 
+                                    ?>
                                     
                                 </div>
                                 <div class="form-group">
@@ -92,6 +98,7 @@
                                                 <td>{$cat_id}</td>
                                                 <td>{$cat_title}</td>
                                                 <td><a href='categories.php?delete={$cat_id}' />Delete</td>
+                                                <td><a href='categories.php?edit={$cat_id}' />Edit</td>
                                             </tr>";
                                         }
                                     ?>
