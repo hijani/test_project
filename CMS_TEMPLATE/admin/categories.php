@@ -50,7 +50,18 @@
                             <form action="categories.php" method="post">
                                 <div class="form-group">
                                     <label for="cat_title">Update Category</label>
-                                    <input type="text" name="cat_title" class="form-control" placeholder="Category Title">
+                                    <?php
+                                        global $connection;
+                                        $nav_query = "SELECT * FROM categories";
+                                        $select_categories = mysqli_query($connection, $nav_query);
+
+                                        while ($row = mysqli_fetch_assoc($select_categories)){
+                                            $cat_id = $row['cat_id'];
+                                            $cat_title = $row['cat_title'];
+                                    ?>
+                                        <input type="text" name="cat_title" class="form-control" placeholder="Category Title">
+                                    <?php } ?>
+                                    
                                 </div>
                                 <div class="form-group">
                                     <input type="submit" name="submit" value="Update Category" class="btn btn-primary">
@@ -61,11 +72,6 @@
                         </div>
 
                         <div class="col-xs-6">
-                        <?php 
-                            global $connection;
-                            $nav_query = "SELECT * FROM categories";
-                            $select_categories = mysqli_query($connection, $nav_query);
-                        ?>
                             <table class="table table-bordered table-hover">
                                 <thead>
                                     <tr>
@@ -74,7 +80,11 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php 
+                                    <?php
+                                        global $connection;
+                                        $nav_query = "SELECT * FROM categories";
+                                        $select_categories = mysqli_query($connection, $nav_query);
+
                                         while ($row = mysqli_fetch_assoc($select_categories)){
                                             $cat_id = $row['cat_id'];
                                             $cat_title = $row['cat_title'];
