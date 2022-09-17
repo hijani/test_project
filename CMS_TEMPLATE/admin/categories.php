@@ -67,10 +67,19 @@
                                             }
                                         } 
                                     ?>
+
+                                    <?php 
+                                        if(isset($_POST['update'])) {
+                                            $delete_cat_title = $_POST['$cat_title'];
+                                            $update_query = "UPDATE categories SET cat_title = '{$cat_title}' WHERE cat_id = {$cat_id}";
+                                            $run_query = mysqli_query($connection, $update_query);
+                                            header("Location: categories.php");
+                                        }
+                                    ?>
                                     
                                 </div>
                                 <div class="form-group">
-                                    <input type="submit" name="submit" value="Update Category" class="btn btn-primary">
+                                    <input type="submit" name="update" value="Update Category" class="btn btn-primary">
                                 </div>
                             </form>
 
