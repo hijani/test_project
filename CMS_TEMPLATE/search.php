@@ -32,7 +32,7 @@
         $count = mysqli_num_rows($search_connection);
 
         if($count == 0) {
-            echo "<h1>Nothing Found<h1/>";
+            echo "<h1>Nothing Found</h1>";
         } else {
 
             while ($row = mysqli_fetch_array($search_connection)) {
