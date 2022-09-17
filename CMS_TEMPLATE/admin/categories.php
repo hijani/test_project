@@ -28,6 +28,11 @@
                         </div>
 
                         <div class="col-xs-6">
+                        <?php 
+                            global $connection;
+                            $nav_query = "SELECT * FROM categories";
+                            $select_categories = mysqli_query($connection, $nav_query);
+                        ?>
                             <table class="table table-bordered table-hover">
                                 <thead>
                                     <tr>
@@ -36,6 +41,11 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    <?php 
+                                        while ($row = mysqli_fetch_assoc($select_categories)){
+
+                                        }
+                                    ?>
                                     <tr>
                                         <td>Baseball category</td>
                                         <td>Baseball category</td>
