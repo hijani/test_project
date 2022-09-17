@@ -22,7 +22,7 @@
                         <div class="col-xs-6">
                             <form action="" method="post">
                                 <div class="form-group">
-                                    <input type="text" name="cat_title" class="form-control">
+                                    <input type="text" name="cat_title" class="form-control" placeholder="Category Title">
                                 </div>
                                 <div class="form-group">
                                     <input type="submit" name="submit" value="Add Categories" class="btn btn-primary">
