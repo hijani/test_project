@@ -47,9 +47,7 @@
                                 </div>
                             </form>
                             
-                            <?php if (isset($_GET['edit'])) {
-                                $cat_id = $_GET['edit'];
-                            ?>
+                            
                             <form action="categories.php" method="post">
                                 <div class="form-group">
                                     <label for="cat_title">Update Category</label>
@@ -90,7 +88,6 @@
                                     <input type="submit" name="update" value="Update Category" class="btn btn-primary">
                                 </div>
                             </form>
-                            <?php } ?>
 
 
                         </div>
