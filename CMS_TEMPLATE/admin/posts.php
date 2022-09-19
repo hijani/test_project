@@ -21,7 +21,7 @@
     if(isset($_GET['source'])) {
         $source = $_GET['source'];
 
-    } else {
+    } 
         switch($source) {
             case 'add_post':
             include "includes/add_post.php";
@@ -40,8 +40,6 @@
             break;
 
         }
-    }
-
 
 ?>                        
                         
