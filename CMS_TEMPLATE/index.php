@@ -1,5 +1,4 @@
 <?php include "includes/header.php"; ?>
-<?php include ""; ?>
 
 <body>
 <?php include "includes/db.php";?>
