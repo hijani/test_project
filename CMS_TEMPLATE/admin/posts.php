@@ -17,6 +17,21 @@
                     <div class="col-lg-12">
                         <h1 class="page-header"> Posts</h1>
 
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Author</th>
+                                    <th>Title</th>
+                                    <th>Category</th>
+                                    <th>Status</th>
+                                    <th>image</th>
+                                    <th>Tags</th>
+                                    <th>Comments</th>
+                                    <th>Date</th>
+                                </tr>
+                            </thead>
+                        </table>
                         
 
                     </div>
