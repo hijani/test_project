@@ -26,6 +26,7 @@
                 $update_cat_title = $_POST['cat_title'];
                 $query = "UPDATE categories SET cat_title = '{$update_cat_title}' WHERE cat_id = {$cat_id} ";
                 $update_query = mysqli_query($connection, $query);
+                header("Location: categories.php");
                 if(!$update_query) {
                     die("query failed" . mysqli_error($connection));
                 }
