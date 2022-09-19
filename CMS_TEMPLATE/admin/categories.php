@@ -47,7 +47,15 @@
                                 </div>
                             </form>
 
+                            <?php 
                             
+                                if(isset($_GET['edit'])) {
+                                    $cat_id = $_GET['edit'];
+
+                                    include "includes/update_categories.php";
+                                }    
+
+                            ?>
                             
 
 
