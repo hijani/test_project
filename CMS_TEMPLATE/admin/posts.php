@@ -18,7 +18,7 @@
                         <h1 class="page-header"> CRUD Categories</h1>
 
                         <div class="col-xs-6">
-                            <?php insert_category(); ?>
+                            <?php inset_category(); ?>
 
                             <form action="categories.php" method="post">
                                 <div class="form-group">
