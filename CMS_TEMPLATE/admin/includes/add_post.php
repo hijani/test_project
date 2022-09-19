@@ -47,5 +47,9 @@
         form-control" name="post_tags">
     </div>
 
+    <div class="form-group">
+        <input type="submit" name="" value="Publish Post" class="btn btn-primary">
+    </div>
+
 
 </form>
