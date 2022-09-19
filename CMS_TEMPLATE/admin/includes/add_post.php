@@ -26,7 +26,7 @@
 
     <div class="form-group">
         <label for="post_image">Post Image</label>
-        <input type="text" class="
+        <input type="file" class="
         form-control" name="post_image">
     </div>
 
@@ -38,8 +38,7 @@
 
     <div class="form-group">
         <label for="post_content">Post Content</label>
-        <input type="text" class="
-        form-control" name="post_content">
+        <textarea class="form-control" name="post_content" id="" cols="30" rows="10"></textarea>
     </div>
 
     <div class="form-group">
