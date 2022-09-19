@@ -1,3 +1,26 @@
+<?php 
+    if(isset($_POST['create_post'])) {
+        $post_id = $_POST['post_id'];
+        $post_author = $_POST['post_author'];
+        $post_title = $_POST['post_title'];
+        $post_category = $_POST['post_category_id'];
+        $post_status = $_POST['post_status'];
+
+        $post_image = $_FILES['image']['name'];
+        $post_image_temp  = $_FILES['image']['temp_name'];
+
+        $post_tags = $_POST['post_tags'];
+        $post_content = $_POST['post_content'];
+        $post_comment_count = $_POST['post_comment_count'];
+        $post_date = $_POST['post_date'];
+    }
+
+
+
+?>
+
+
+
 <form action="" method="post" enctype="multipart/form-data">
 
     <div class="form-group">
@@ -48,7 +71,7 @@
     </div>
 
     <div class="form-group">
-        <input type="submit" name="" value="Publish Post" class="btn btn-primary">
+        <input type="submit" name="create_post" value="Publish Post" class="btn btn-primary">
     </div>
 
 
