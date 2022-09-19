@@ -14,7 +14,7 @@
         $post_comment_count = $_POST['post_comment_count'];
         $post_date = date('d-m-y');
 
-        move_uploaded_file($post_image_temp, "./CMS_TEMPLATE/$post_image");
+        move_uploaded_file($post_image_temp, "../images/$post_image");
     }
 
 
