@@ -23,15 +23,18 @@
 
     } else {
         switch($source) {
-            case '34':
-            echo "nice34";
+            case 34:
+            echo "<h1>nice34</h1>";
             break;
+
             case '100':
             echo "nice100";
             break;
-            case "200":
+
+            case '200':
             echo "nice200";
             break;
+
             default:
             include "includes/view_all_posts.php";
             break;
