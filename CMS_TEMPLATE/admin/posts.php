@@ -33,15 +33,15 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <tb>1</tb>
-                                    <tb>autht</tb>
-                                    <tb>tiuttu</tb>
-                                    <tb>catet</tb>
-                                    <tb>stat</tb>
-                                    <tb>imghm</tb>
-                                    <tb>tagg</tb>
-                                    <tb>commm</tb>
-                                    <tb>dteee</tb>
+                                    <td>1</td>
+                                    <td>autht</td>
+                                    <td>tiuttu</td>
+                                    <td>catet</td>
+                                    <td>stat</td>
+                                    <td>imghm</td>
+                                    <td>tagg</td>
+                                    <td>commm</td>
+                                    <td>dteee</td>
                                 </tr>
                             </tbody>
                         </table>
