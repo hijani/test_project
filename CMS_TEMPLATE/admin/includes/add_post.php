@@ -17,7 +17,8 @@
         move_uploaded_file($post_image_temp, "../images/$post_image");
 
         $query = "INSERT INTO posts(post_category_id, post_title, post_author, post_date, post_image, post_content, post_tags, post_comment_count, post_status)";
-        $query .= "VALUES($post_category_id, {'$post_title'}, {'$post_author'}, now(), {'$post_image'}, {'$post_content'}, {'$post_tags'}, {'$pots_comment_count'}, {'$post_status'})";
+        $query .= "VALUES($post_category_id, '{$post_title}', '{$post_author}', now(), '{$post_image}', '{$post_content}', '{$post_tags}', '{$pots_comment_count}', '{$post_status}')";
+        $post_connection = mysqli_query($connection, $query);
 
 
     }
@@ -69,12 +70,6 @@
     <div class="form-group">
         <label for="post_content">Post Content</label>
         <textarea class="form-control" name="post_content" id="" cols="30" rows="10"></textarea>
-    </div>
-
-    <div class="form-group">
-        <label for="post_tags">Post Tags</label>
-        <input type="text" class="
-        form-control" name="post_tags">
     </div>
 
     <div class="form-group">
