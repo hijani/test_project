@@ -69,11 +69,24 @@
                                     <?php   }
                                         } ?>
 
+                                    <?php 
+
+                                        if(isset($_POST['update_category'])) {
+                                            $update_cat_title = $_POST['cat_title'];
+                                            $query = "UPDATE categories SET cat_title = '{$update_cat_title}' WHERE cat_id = {$cat_id} ";
+                                            $update_query = mysqli_query($connection, $query);
+                                            if(!$update_query) {
+                                                die("query failed" . mysqli_error($connection));
+                                            }
+                                        }
+                                    
+                                    ?>
+
 
                                     
                                 </div>
                                 <div class="form-group">
-                                    <input type="submit" name="submit" value="Update Category" class="btn btn-primary">
+                                    <input type="submit" name="update_category" value="Update Category" class="btn btn-primary">
                                 </div>
                             </form>
                             
