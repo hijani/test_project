@@ -12,7 +12,9 @@
         $post_tags = $_POST['post_tags'];
         $post_content = $_POST['post_content'];
         $post_comment_count = $_POST['post_comment_count'];
-        $post_date = $_POST['post_date'];
+        $post_date = date('d-m-y');
+
+        move_uploaded_file($post_image_temp, "");
     }
 
 
@@ -48,9 +50,9 @@
     </div>
 
     <div class="form-group">
-        <label for="post_image">Post Image</label>
+        <label for="image">Post Image</label>
         <input type="file" class="
-        form-control" name="post_image">
+        form-control" name="image">
     </div>
 
     <div class="form-group">
