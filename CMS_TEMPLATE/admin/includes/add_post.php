@@ -24,9 +24,7 @@
         $post_connection = mysqli_query($connection, $query);
         if(!$post_connection) {
             die("query failed" . mysqli_error($connection));
-        } else {
-            echo "connected";
-        }
+        } 
 
 
     }
