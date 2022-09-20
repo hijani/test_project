@@ -11,15 +11,15 @@
 
         $post_tags = $_POST['post_tags'];
         $post_content = $_POST['post_content'];
-        $post_comment_count = $_POST['post_comment_count'];
+        $post_comment_count = 4;
         $post_date = date('d-m-y');
 
         move_uploaded_file($post_image_temp, "../images/$post_image");
 
-        // $query = "INSERT INTO posts    (post_category_id, post_title, post_author, post_date, post_image, post_content, post_tags, post_comment_count, post_status) ";
-        // $query .= " VALUES ($post_category_id, '{$post_title}', '{$post_author}', now(), '{$post_image}', '{$post_content}', '{$post_tags}', {$post_comment_count}, '{$post_status}')";
+        $query = "INSERT INTO posts    (post_category_id, post_title, post_author, post_date, post_image, post_content, post_tags, post_comment_count, post_status) ";
+        $query .= " VALUES ($post_category_id, '{$post_title}', '{$post_author}', now(), '{$post_image}', '{$post_content}', '{$post_tags}', {$post_comment_count}, '{$post_status}')";
 
-        $query = "INSERT INTO try (try_title) VALUES ('$post_title')";
+        // $query = "INSERT INTO try (try_title) VALUES ('$post_title')";
 
         $post_connection = mysqli_query($connection, $query);
         if(!$post_connection) {
