@@ -1,3 +1,4 @@
+<?php ob_start(); ?>
 <table class="table table-bordered table-hover">
     <thead>
         <tr>
@@ -54,6 +55,7 @@
             
             $query = "DELETE FROM posts WHERE post_id = {$post_id}";
             $post_delete_query = mysqli_query($connection, $query);
+            header("Location: posts.php");
         }
 
 ?>
