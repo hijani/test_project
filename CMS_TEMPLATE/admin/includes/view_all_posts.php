@@ -38,6 +38,7 @@
             echo "<td>$post_tags</td>";
             echo "<td>$post_comments</td>";
             echo "<td>$post_date</td>";
+            echo "<td><a href='posts.php?delete={$post_id}'>Delete</a></td>";
             echo "<tr>";
 
 
@@ -45,3 +46,12 @@
     ?>
     </tbody>
 </table>
+
+<?php 
+
+        if(isset($_GET['delete'])) {
+            $post_id = $_GET['delete'];
+            echo "$post_id";
+        }
+
+?>
