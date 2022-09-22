@@ -104,7 +104,7 @@
     </div>
 
     <div class="form-group">
-        <img src="../images/<?php echo $post_image; ?>" width="200" alt="images">
+        <img src="../<?php echo $post_image; ?>" width="200" alt="images">
         <input type="file" name="image">
     </div>
 
