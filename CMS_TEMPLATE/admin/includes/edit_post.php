@@ -52,7 +52,7 @@
         $query .= "post_status = '{$post_status}', ";
         $query .= "post_tags = '{$post_tags}', ";
         $query .= "post_content = '{$post_content}', ";
-        $query .= "post_image = '../images/{$post_image}' ";
+        $query .= "post_image = 'images/{$post_image}' ";
         $query .= "WHERE post_id = {$edit_id} ";
 
         $update_post = mysqli_query($connection, $query);
