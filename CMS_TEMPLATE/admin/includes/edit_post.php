@@ -1,12 +1,14 @@
 <?php   
 
         if(isset($_GET['p_id'])){
-            echo $_GET['[p_id'];
+            $edit_id = $_GET['p_id'];
+            echo $edit_id;
 
         }
 
         $query = "SELECT * FROM posts";
         $edit_posts = mysqli_query($connection, $query);
+        
         while ($row = mysqli_fetch_assoc($edit_posts)) {
             $post_id = $row['post_id'];
             $post_author = $row['post_author'];
@@ -21,14 +23,6 @@
         }
 
 ?>
-
-
-
-
-
-
-
-
 
 
 
