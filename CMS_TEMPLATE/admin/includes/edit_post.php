@@ -82,7 +82,7 @@
     </div>
 
     <div class="form-group">
-        <input type="submit" name="create_post" value="Publish Post" class="btn btn-primary">
+        <input type="submit" name="update_post" value="Update Post" class="btn btn-primary">
     </div>
 
 
