@@ -2,24 +2,36 @@
 
     if(isset($_GET['p_id'])){
         $edit_id = $_GET['p_id'];
-
+    }
         
 
-        $query = "SELECT * FROM posts WHERE post_id = {$edit_id}";
-        $edit_posts = mysqli_query($connection, $query);
+    $query = "SELECT * FROM posts WHERE post_id = {$edit_id}";
+    $edit_posts = mysqli_query($connection, $query);
 
-        while ($row = mysqli_fetch_assoc($edit_posts)) {
-            $post_id = $row['post_id'];
-            $post_author = $row['post_author'];
-            $post_title = $row['post_title'];
-            $post_category = $row['post_category_id'];
-            $post_status = $row['post_status'];
-            $post_image = $row['post_image'];
-            $post_content=$row['post_content'];
-            $post_tags = $row['post_tags'];
-            $post_comments = $row['post_comment_count'];
-            $post_date = $row['post_date'];
-        }
+    while ($row = mysqli_fetch_assoc($edit_posts)) {
+        $post_id = $row['post_id'];
+        $post_author = $row['post_author'];
+        $post_title = $row['post_title'];
+        $post_category = $row['post_category_id'];
+        $post_status = $row['post_status'];
+        $post_image = $row['post_image'];
+        $post_content=$row['post_content'];
+        $post_tags = $row['post_tags'];
+        $post_comments = $row['post_comment_count'];
+        $post_date = $row['post_date'];
+    }
+
+    if(isset($_POST['update_post'])) {
+        
+        $post_author = $_POST['post_author'];
+        $post_title = $_POST['post_title'];
+        $post_category = $_POST['post_category_id'];
+        $post_status = $_POST['post_status'];
+        $post_image = $_POST['post_image'];
+        $post_content=$_POST['post_content'];
+        $post_tags = $_POST['post_tags'];
+        $post_comments = $_POST['post_comment_count'];
+        $post_date = $_POST['post_date'];
     }
 
 ?>
