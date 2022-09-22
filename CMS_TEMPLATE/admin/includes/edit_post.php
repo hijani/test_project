@@ -25,7 +25,7 @@
         
         $post_author = $_POST['post_author'];
         $post_title = $_POST['post_title'];
-        $post_category = $_POST['post_category_id'];
+        $post_category_id = $_POST['post_category'];
         $post_status = $_POST['post_status'];
         $post_image = $_POST['post_image'];
         $post_content=$_POST['post_content'];
