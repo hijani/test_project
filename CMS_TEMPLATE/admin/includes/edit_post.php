@@ -32,11 +32,6 @@
         $post_content = $_POST['post_content'];
         $post_tags = $_POST['post_tags'];
 
-        $image = "images/$post_image";
-        if($post_image !== $image) {
-            $post_image = $image;
-        }
-
         if(empty($post_image)) {
             $query = "SELECT * FROM posts WHERE post_id = {$edit_id} ";
             $result = mysqli_query($connection, $query);
