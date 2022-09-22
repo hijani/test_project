@@ -14,7 +14,7 @@
     <div class="all-pc">
         <?php 
             
-            $query = 'select * from computr';
+            $query = 'select * from computer';
             $select_all_from_computer = mysqli_query($connection, $query);
 
             if (!$select_all_from_computer) {
