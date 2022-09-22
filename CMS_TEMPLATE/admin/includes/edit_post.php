@@ -43,7 +43,13 @@
         $query .= "post_tags = '{$post_tags}', ";
         $query .= "post_content = '{$post_content}', ";
         $query .= "post_image = '{$post_image}', ";
-        $query .= "WHERE post_id = '{$edit_id}, ";
+        $query .= "WHERE post_id = {$edit_id}, ";
+
+        $update_post = mysqli_query($connection, $query);
+
+        if(!$update_post) {
+            die("query failed" . mysqli_error($connection));
+        }
 
 
     }
