@@ -32,8 +32,6 @@
         $post_content = $_POST['post_content'];
         $post_tags = $_POST['post_tags'];
 
-        move_uploaded_file($post_image_temp, "../images/$post_image");
-
         if(empty($post_image)) {
             $query = "SELECT * FROM posts WHERE post_id = {$edit_id} ";
             $result = mysqli_query($connection, $query);
@@ -43,6 +41,9 @@
             }
         }
 
+        move_uploaded_file($post_image_temp, "../images/$post_image");
+        
+        
         $query = "UPDATE posts SET ";
         $query .= "post_title = '{$post_title}', ";
         $query .= "post_category_id = {$post_category_id}, ";
