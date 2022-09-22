@@ -47,10 +47,14 @@
 
         $update_post = mysqli_query($connection, $query);
 
-        // if(!$update_post) {
-        //     echo "failed";
-        //     die("query failed" . mysqli_error($connection));
-        // }
+        if(empty($post_image)) {
+            $query = "SELECT * FROM posts WHERE post_id = {$edit_id} ";
+            $result = mysqli_query($connection, $query);
+
+            while($row = mysqli_fetch_assoc($result)) {
+                $post_image = $row['post_image'];
+            }
+        }
 
 
     }
@@ -101,6 +105,7 @@
 
     <div class="form-group">
         <img src="../images/<?php echo $post_image; ?>" width="200" alt="images">
+        <input type="file" name="image">
     </div>
 
     <div class="form-group">
