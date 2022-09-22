@@ -40,7 +40,7 @@
             echo "<td>$post_comments</td>";
             echo "<td>$post_date</td>";
             echo "<td><a href='posts.php?delete={$post_id}'>Delete</a></td>";
-            echo "<td><a href='posts.php?edit={$post_id}'>Edit</a></td>";
+            echo "<td><a href='posts.php?source=edit_post'>Edit</a></td>";
             echo "<tr>";
 
 
@@ -58,5 +58,14 @@
             $post_delete_query = mysqli_query($connection, $query);
             header("Location: posts.php");
         }
+
+?>
+
+<?php 
+
+        // if(isset($_GET['edit'])) {
+        //     $post_id = $_GET['edit'];
+            
+        // }
 
 ?>
