@@ -1,5 +1,5 @@
 <?php ob_start(); ?>
-<table class="table table-bordered table-dark">
+<table class="table table-bordered table-dark table-hover">
     <thead>
         <tr>
             <th>Id</th>
