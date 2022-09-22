@@ -38,17 +38,18 @@
 
             while($row = mysqli_fetch_assoc($result)) {
                 $post_image = $row['post_image'];
+
+                $image = "images/$post_image";
+                if($post_image !== $image) {
+                    $post_image = $image;
+                }
             }
         }
 
         
         move_uploaded_file($post_image_temp, "../images/$post_image");
 
-        $image = "images/$post_image";
         
-        if($post_image !== $image) {
-            $post_image = $image;
-        }
 
         $query = "UPDATE posts SET ";
         $query .= "post_title = '{$post_title}', ";
