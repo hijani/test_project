@@ -14,10 +14,14 @@
     <div class="all-pc">
         <?php 
             
-            $query = 'select * from computer';
+            $query = 'select * from computr';
             $select_all_from_computer = mysqli_query($connection, $query);
+
+            if (!$select_all_from_computer) {
+                echo "hell". mysqli_error($connection);
+            }
             while ($row = mysqli_fetch_assoc($select_all_from_computer)) {
-                $index = $row['index'];
+                $index = $row['id'];
                 $mouse = $row['mouse'];
                 $keyboard = $row['keyboard'];
                 $led = $row['led'];

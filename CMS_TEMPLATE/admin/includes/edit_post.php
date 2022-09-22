@@ -29,7 +29,7 @@
         $post_status = $_POST['post_status'];
         $post_image = $_FILES['image']['name'];
         $post_image_temp  = $_FILES['image']['tmp_name'];
-        $post_content=$_POST['post_content'];
+        $post_content = $_POST['post_content'];
         $post_tags = $_POST['post_tags'];
 
         move_uploaded_file($post_image_temp, "../images/$post_image");
@@ -43,11 +43,12 @@
         $query .= "post_tags = '{$post_tags}', ";
         $query .= "post_content = '{$post_content}', ";
         $query .= "post_image = '{$post_image}', ";
-        $query .= "WHERE post_id = {$edit_id}, ";
+        $query .= "WHERE post_id = {$edit_id} ";
 
         $update_post = mysqli_query($connection, $query);
 
         if(!$update_post) {
+            echo "failed";
             die("query failed" . mysqli_error($connection));
         }
 
