@@ -46,7 +46,7 @@
 
 
             echo "<td>$post_status</td>";
-            echo "<td><img class='img-responsive' src='$post_image' alt='image'></td>";
+            echo "<td><img class='img-responsive' src='../$post_image' alt='image'></td>";
             echo "<td>$post_tags</td>";
             echo "<td>$post_comments</td>";
             echo "<td>$post_date</td>";
