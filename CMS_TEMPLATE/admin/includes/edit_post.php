@@ -34,6 +34,15 @@
 
         move_uploaded_file($post_image_temp, "../images/$post_image");
 
+        if(empty($post_image)) {
+            $query = "SELECT * FROM posts WHERE post_id = {$edit_id} ";
+            $result = mysqli_query($connection, $query);
+
+            while($row = mysqli_fetch_assoc($result)) {
+                $post_image = $row['post_image'];
+            }
+        }
+
         $query = "UPDATE posts SET ";
         $query .= "post_title = '{$post_title}', ";
         $query .= "post_category_id = {$post_category_id}, ";
@@ -46,16 +55,6 @@
         $query .= "WHERE post_id = {$edit_id} ";
 
         $update_post = mysqli_query($connection, $query);
-
-        if(empty($post_image)) {
-            $query = "SELECT * FROM posts WHERE post_id = {$edit_id} ";
-            $result = mysqli_query($connection, $query);
-
-            while($row = mysqli_fetch_assoc($result)) {
-                $post_image = $row['post_image'];
-            }
-        }
-
 
     }
 
