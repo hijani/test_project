@@ -1,3 +1,37 @@
+<?php   
+
+        if(isset($_GET['p_id'])){
+            echo $_GET['[p_id'];
+
+        }
+
+        $query = "SELECT * FROM posts";
+        $edit_posts = mysqli_query($connection, $query);
+        while ($row = mysqli_fetch_assoc($edit_posts)) {
+            $post_id = $row['post_id'];
+            $post_author = $row['post_author'];
+            $post_title = $row['post_title'];
+            $post_category = $row['post_category_id'];
+            $post_status = $row['post_status'];
+            $post_image = $row['post_image'];
+            $post_content=$row['post_content'];
+            $post_tags = $row['post_tags'];
+            $post_comments = $row['post_comment_count'];
+            $post_date = $row['post_date'];
+        }
+
+?>
+
+
+
+
+
+
+
+
+
+
+
 <form action="" method="post" enctype="multipart/form-data">
 
     <div class="form-group">
