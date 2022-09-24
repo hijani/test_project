@@ -58,13 +58,13 @@
                 <?php 
                 
                         if(isset($_POST['create_comment'])) {
-                            $comment_id = $_GET['p_id'];
+                            $comment_post_id = $_GET['p_id'];
                             $comment_author = $_POST['comment_author'];
                             $comment_content = $_POST['comment_content'];
                             $comment_email = $_POST['comment_email'];
 
                             $query = "INSERT INTO comments (comment_post_id, comment_author, comment_email, comment_content, comment_status, comment_date) ";
-                            $query .= "VALUES ($comment_id, '$comment_author', '$comment_email', '$comment_content', 'unapproved', now()) ";
+                            $query .= "VALUES ($comment_post_id, '$comment_author', '$comment_email', '$comment_content', 'unapproved', now()) ";
                             $create_comment_query = mysqli_query($connection, $query);
                         }
                 
