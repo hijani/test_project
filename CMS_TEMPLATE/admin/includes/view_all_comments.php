@@ -33,23 +33,19 @@
             echo "<td>$comment_author</td>";
             echo "<td>$comment_content</td>";
 
-            $query = "SELECT * FROM categories WHERE cat_id = {$comment_category}";
-            $update_categories = mysqli_query($connection, $query);
+            // $query = "SELECT * FROM categories WHERE cat_id = {$comment_category}";
+            // $update_categories = mysqli_query($connection, $query);
 
-            while ($row = mysqli_fetch_assoc($update_categories)){
-                $cat_id = $row['cat_id'];
-                $cat_title = $row['cat_title'];
-            }
+            // while ($row = mysqli_fetch_assoc($update_categories)){
+            //     $cat_id = $row['cat_id'];
+            //     $cat_title = $row['cat_title'];
+            // }
 
-            echo "<td>$cat_title</td>";
-
-
+            echo "<td>$comment_email</td>";
             echo "<td>$comment_status</td>";
-            echo "<td><img class='img-responsive' src='../images/$comment_image' alt='image'></td>";
-            echo "<td>$comment_tags</td>";
-            echo "<td>$comment_comments</td>";
             echo "<td>$comment_date</td>";
-            echo "<td><a href='comments.php?source=edit_comment&p_id={$comment_id}'>Edit</a></td>";
+            echo "<td><a href='comments.php?source=edit_comment&p_id='>Approve</a></td>";
+            echo "<td><a href='comments.php?delete='>Un-Approve</a></td>";
             echo "<td><a href='comments.php?delete={$comment_id}'>Delete</a></td>";
             echo "</tr>";
 
