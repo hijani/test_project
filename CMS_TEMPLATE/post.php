@@ -60,7 +60,13 @@
                     <h4>Leave a Comment:</h4>
                     <form role="form">
                         <div class="form-group">
-                            <textarea class="form-control" rows="3"></textarea>
+                            <input type="text" name="comment_author" placeholder="Full Name" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="comment_email" placeholder="Email" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" rows="3" placeholder="Your Comment"></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
