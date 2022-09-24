@@ -68,7 +68,7 @@
                         <div class="form-group">
                             <textarea class="form-control" rows="3" placeholder="Your Comment"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" name="create_comment" class="btn btn-primary">Submit</button>
                     </form>
                 </div>
 
