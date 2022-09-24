@@ -31,6 +31,7 @@
             echo "<tr>";
             echo "<td>$comment_id</td>";
             echo "<td>$comment_author</td>";
+            echo "<td>$comment_content</td>";
 
             $query = "SELECT * FROM categories WHERE cat_id = {$comment_category}";
             $update_categories = mysqli_query($connection, $query);
