@@ -43,7 +43,16 @@
 
             echo "<td>$comment_email</td>";
             echo "<td>$comment_status</td>";
-            echo "<td>In response</td>";
+                $query = "SELECT * FROM posts WHERE post_id = {$comment_post_id}";
+                $response_query = mysqli_query($connection, $query);
+
+                while($row = mysqli_fetch_assoc($response_query)) {
+                    $post_id = $row['post_id'];
+                    $post_title = $row['post_title'];
+
+                    echo "<a href=''><td>$post_title</td></a>";
+                }
+            
             echo "<td>$comment_date</td>";
             echo "<td><a href='comments.php?source=edit_comment&p_id='>Approve</a></td>";
             echo "<td><a href='comments.php?delete='>Un-Approve</a></td>";
