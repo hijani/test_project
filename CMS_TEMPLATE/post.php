@@ -76,10 +76,24 @@
                         <img class="media-object" src="http://placehold.it/64x64" alt="">
                     </a>
                     <div class="media-body">
-                        <h4 class="media-heading">Start Bootstrap
-                            <small>August 25, 2014 at 9:30 PM</small>
-                        </h4>
-                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                    <?php 
+                        $query = "SELECT * FROM comments";
+                        $select_all_comments = mysqli_query($connection, $query);
+
+                        while($row = mysqli_fetch_assoc($select_all_comments)) {
+                            $comment_id = $row['comment_id'];
+                            $comment_author = $row['comment_author'];
+                            $comment_date = $row['comment_date'];
+                            $comment_post_id = $row['comment_post_id'];
+                            $comment_content = $row['comment_content'];
+
+                            echo "<h4 class='media-heading'>$comment_author
+                            <small>$comment_date</small>
+                            </h4>";
+                            echo $comment_content;
+                        }
+                    ?>
+                        
                     </div>
                 </div>
 
