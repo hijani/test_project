@@ -4,10 +4,10 @@
         <tr>
             <th>Id</th>
             <th>Author</th>
-            <th>Comment</th>
+            <th>Content</th>
             <th>Email</th>
             <th>Status</th>
-            <th>IN Response To</th>
+            <th>In Response To</th>
             <th>Date</th>
             <th>Approve</th>
             <th>Un-Approve</th>
@@ -43,6 +43,7 @@
 
             echo "<td>$comment_email</td>";
             echo "<td>$comment_status</td>";
+            echo "<td>In response</td>";
             echo "<td>$comment_date</td>";
             echo "<td><a href='comments.php?source=edit_comment&p_id='>Approve</a></td>";
             echo "<td><a href='comments.php?delete='>Un-Approve</a></td>";
