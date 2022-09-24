@@ -92,11 +92,9 @@
                 <!-- Posted Comments -->
 
                 <!-- Comment -->
-                <div class="media">
-                    <a class="pull-left" href="#">
-                        <img class="media-object" src="http://placehold.it/64x64" alt="">
-                    </a>
-                    <div class="media-body">
+                
+                    
+                    
                     <?php 
                         $query = "SELECT * FROM comments";
                         $select_all_comments = mysqli_query($connection, $query);
@@ -108,15 +106,26 @@
                             $comment_post_id = $row['comment_post_id'];
                             $comment_content = $row['comment_content'];
 
+                            echo "<div class='media'>";
+                    ?>
+                            <a class="pull-left" href="#">
+                                <img class="media-object" src="http://placehold.it/64x64" alt="">
+                            </a>
+
+                    <?php
+
+                            echo "<div class='media-body'>";
                             echo "<h4 class='media-heading'>$comment_author
                             <small>$comment_date</small>
                             </h4>";
                             echo $comment_content;
+                            echo "</div>";
+                            echo "</div>";
                         }
                     ?>
                         
-                    </div>
-                </div>
+                    
+                
 
                 <!-- Comment -->
                 <div class="media">
