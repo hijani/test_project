@@ -66,7 +66,7 @@
                 <!-- Comments Form -->
                 <div class="well">
                     <h4>Leave a Comment:</h4>
-                    <form role="form">
+                    <form role="form" action="" method="post">
                         <div class="form-group">
                             <input type="text" name="comment_author" placeholder="Full Name" class="form-control">
                         </div>
