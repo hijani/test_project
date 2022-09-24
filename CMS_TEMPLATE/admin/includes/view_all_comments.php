@@ -23,6 +23,7 @@
             $comment_id = $row['comment_id'];
             $comment_author = $row['comment_author'];
             $comment_post_id = $row['comment_post_id'];
+            $comment_content = $row['comment_content'];
             $comment_email = $row['comment_email'];
             $comment_status = $row['comment_status'];
             $comment_date = $row['comment_date'];
