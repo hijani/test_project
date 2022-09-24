@@ -50,7 +50,7 @@
                     $post_id = $row['post_id'];
                     $post_title = $row['post_title'];
 
-                    echo "<a href=''><td>$post_title</td></a>";
+                    echo "<a href='../post.php?p_id=$post_id'><td>$post_title</td></a>";
                 }
             
             echo "<td>$comment_date</td>";
