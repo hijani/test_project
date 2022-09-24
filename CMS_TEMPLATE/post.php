@@ -64,7 +64,7 @@
                             $comment_email = $_POST['comment_email'];
 
                             $query = "INSERT INTO comments (comment_post_id, comment_author, comment_email, comment_content, comment_status, comment_date) ";
-                            $query .= "VALUES ($comment_post_id, '$comment_author', '$comment_email', '$comment_content', 'unapproved', now() + time()) ";
+                            $query .= "VALUES ($comment_post_id, '$comment_author', '$comment_email', '$comment_content', 'unapproved', now()) ";
                             $create_comment_query = mysqli_query($connection, $query);
                         }
                 
@@ -81,7 +81,7 @@
                             <input type="email" name="comment_email" placeholder="Email" class="form-control">
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control" rows="3" placeholder="Your Comment"></textarea>
+                            <textarea name="comment_content" class="form-control" rows="3" placeholder="Your Comment"></textarea>
                         </div>
                         <button type="submit" name="create_comment" class="btn btn-primary">Submit</button>
                     </form>
