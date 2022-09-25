@@ -67,6 +67,10 @@
                         $query .= "VALUES ($comment_post_id, '$comment_author', '$comment_email', '$comment_content', 'unapproved', now()) ";
                         $create_comment_query = mysqli_query($connection, $query);
 
+                        $query = "UPDATE comments SET post_comment_count = post_comment_count + 1 ";
+                        $query .= "WHERE post_id = $comment_post_id ";
+                        $update_comment_count = mysqli_query($connection, $query);
+
                     }
                 
                 ?>

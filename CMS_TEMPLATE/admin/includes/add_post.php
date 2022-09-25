@@ -11,7 +11,7 @@
 
         $post_tags = $_POST['post_tags'];
         $post_content = $_POST['post_content'];
-        $post_comment_count = 4;
+        // $post_comment_count = 4;
         $post_date = date('d-m-y');
 
         move_uploaded_file($post_image_temp, "../images/$post_image");
