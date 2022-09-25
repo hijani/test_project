@@ -116,6 +116,7 @@
                                 <?php echo $comment_author; ?>
                                 <small><?php echo $comment_date; ?></small>
                             </h4>
+                            <?php echo $comment_content; ?>
                         </div>
                     </div>
 
