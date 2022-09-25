@@ -96,7 +96,7 @@
                     
                     
                     <?php 
-                        $query = "SELECT * FROM comments WHERE comment_post_id = $comment_post_id ";
+                        $query = "SELECT * FROM comments WHERE comment_post_id = {$comment_post_id} ";
                         $query .= " AND comment_status = 'Approved' ";
                         $query .= " ORDER BY comment_id DESC";
                         $select_approve_comments = mysqli_query($connection, $query);
