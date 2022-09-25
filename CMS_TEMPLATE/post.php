@@ -113,8 +113,8 @@
                         </a>
                         <div class="media-body">
                             <h4 class="media-heading">
-                                Heading
-                                <small>date</small>
+                                <?php echo $comment_author; ?>
+                                <small><?php echo $comment_date; ?></small>
                             </h4>
                         </div>
                     </div>
