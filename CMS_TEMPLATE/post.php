@@ -96,7 +96,9 @@
                     
                     
                     <?php 
-                        $query = "SELECT * FROM comments";
+                        $query = "SELECT * FROM comments WHERE comment_post_id = $comment_post_id ";
+                        $query .= "AND comment_status = 'Approved' ";
+                        $query .= "";
                         $select_all_comments = mysqli_query($connection, $query);
 
                         while($row = mysqli_fetch_assoc($select_all_comments)) {
@@ -106,7 +108,7 @@
                             $comment_post_id = $row['comment_post_id'];
                             $comment_content = $row['comment_content'];
                     ?>
-                    
+
                     <div class="media">
                         <a class="pull-left" href="#">
                             <img class="media-object" src="http://placehold.it/64x64" alt="">
