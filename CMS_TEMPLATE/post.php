@@ -105,24 +105,19 @@
                             $comment_date = $row['comment_date'];
                             $comment_post_id = $row['comment_post_id'];
                             $comment_content = $row['comment_content'];
-
-                            echo "<div class='media'>";
                     ?>
-                            <a class="pull-left" href="#">
-                                <img class="media-object" src="http://placehold.it/64x64" alt="">
-                            </a>
-
-                    <?php
-
-                            echo "<div class='media-body'>";
-                            echo "<h4 class='media-heading'>$comment_author
-                            <small>$comment_date</small>
-                            </h4>";
-                            echo $comment_content;
-                            echo "</div>";
-                            echo "</div>";
-                        }
-                    ?>
+                    
+                    <div class="media">
+                        <a class="pull-left" href="#">
+                            <img class="media-object" src="http://placehold.it/64x64" alt="">
+                        </a>
+                        <div class="media-body">
+                            <h4 class="media-heading">
+                                Heading
+                                <small>date</small>
+                            </h4>
+                        </div>
+                    </div>
                         
                     
                 
