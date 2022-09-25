@@ -98,10 +98,10 @@
                     <?php 
                         $query = "SELECT * FROM comments WHERE comment_post_id = $comment_post_id ";
                         $query .= "AND comment_status = 'Approved' ";
-                        $query .= "";
-                        $select_all_comments = mysqli_query($connection, $query);
+                        $query .= "ORDER BY comment_id DESC";
+                        $select_approve_comments = mysqli_query($connection, $query);
 
-                        while($row = mysqli_fetch_assoc($select_all_comments)) {
+                        while($row = mysqli_fetch_assoc($select_approve_comments)) {
                             $comment_id = $row['comment_id'];
                             $comment_author = $row['comment_author'];
                             $comment_date = $row['comment_date'];
